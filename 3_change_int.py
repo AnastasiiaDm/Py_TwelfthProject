@@ -13,10 +13,9 @@ n = 874658734
 
 
 def sum_int():
-    tuple_n = tuple(str(n))
-    k = []
-    print(k)
-    print([r+1 for r in range(len(n))])
+    list_n = [int(a) for a in list(str(n))]
+    # print('сумма чисел списка', sum(list_n[0:len(list_n)]))
+    print(sum(k * (list_n.index(k) + 1) for k in list_n))
 
 
 sum_int()

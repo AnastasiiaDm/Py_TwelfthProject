@@ -3,19 +3,19 @@
 
 s = 'AABABBAABBBAB'
 
+
 def change_str():
-    # A_B = s.replace('A', 'B')
-    # B_A = s.replace('B', 'A')
-    # print(A_B + B_A)
+    r = []
+    # ?????????????как это впихнуть в list comprehension? почему результат none??????
+    # print([(r.append('B') if k == 'A' else r.append('A')) for k in s])
 
-    for l in s:
-        if l == 'A':
-            l ='B'
+    for k in s:
+        if k == 'A':
+            r.append('B')
         else:
-            l = 'A'
-        print(l)
+            r.append('A')
 
-
+    print(''.join((str(elem) for elem in r)))
 
 
 change_str()
